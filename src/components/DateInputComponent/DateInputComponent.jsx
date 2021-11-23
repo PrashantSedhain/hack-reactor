@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
@@ -6,13 +6,7 @@ import {
 } from "@material-ui/pickers";
 
 const DateInputComponent = (props) => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-    console.log(date);
-  };
-
+  
   return (
     <div style={{ margin: "12px" }}>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -21,10 +15,10 @@ const DateInputComponent = (props) => {
           variant="inline"
           format="MM/dd/yyyy"
           margin="normal"
-          id="date-picker-inline"
-          label="Select Start Date"
-          value={selectedDate}
-          onChange={handleDateChange}
+          id={props.id}
+          label={props.label}
+          value={props.selectedDate}
+          onChange={(date) => props.setDate(date)}
           KeyboardButtonProps={{
             "aria-label": "change date",
           }}

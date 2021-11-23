@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+
 const CardComponent = (props) => {
   return (
     <div style={{ margin: "0.5em" }}>

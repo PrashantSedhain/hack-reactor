@@ -4,9 +4,9 @@ import "./SearchBarComponent.css";
 const SearchBarComponent = (props) => {
     return (
         <div style={{display: "flex", justifyContent: "center" }}>
-            <DateInputComponent/>
-            <DateInputComponent/>
-            <button onClick={props.onSearchClickedHandler} className="button searchButton" type="submit">Search</button>
+            <DateInputComponent id="start-date" label="Select Start Date" setDate={props.setStartDate} selectedDate={props.selectedStartDate} />
+            <DateInputComponent id="end-date" label="Select End Date" setDate={props.setEndDate} selectedDate={props.selectedEndDate}/>
+            <button onClick={props.onSearchClicked} className="button searchButton" type="submit">Search</button>
         </div>
     )
 }
