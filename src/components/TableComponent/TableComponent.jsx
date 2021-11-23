@@ -4,7 +4,7 @@ import { Table } from "react-bootstrap";
 const TableComponent = (props) => {
   return (
     <div >
-      <h5 style={{fontFamily: "cursive", textAlign: "center"}}>Total Results: {props.totalCount} </h5>
+      <h5 style={{fontFamily: "cursive", textAlign: "center", textDecoration: "underline" }}>Total Results: {props.totalCount} </h5>
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
