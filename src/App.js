@@ -1,8 +1,8 @@
 import Homepage from "./pages/HomePage";
-
+import background from './assets/Images/stars_transparent.png'
 function App() {
   return (
-    <div>
+    <div styles={{ backgroundImage:`url(${background})` }}>
       <Homepage />
     </div>
   );
