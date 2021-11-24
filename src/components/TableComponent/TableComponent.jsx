@@ -4,11 +4,11 @@ import { Table } from "react-bootstrap";
 const TableComponent = (props) => {
   return (
     <div >
-      <h5 style={{fontFamily: "cursive", textAlign: "center", textDecoration: "underline" }}>Total Results: {props.totalCount} </h5>
+      <h5 style={{fontFamily: "cursive", fontWeight: "10" }}>{props.totalCount} Results Found</h5>
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>#</th>
+            <th>S/N</th>
             <th>Name</th>
             <th>Hazardous</th>
             <th>Estimated Diameter in Miles (Max)</th>
